@@ -63,3 +63,18 @@ func TestBytes2String(t *testing.T) {
 	fmt.Println(s1)
 	fmt.Println(*s2)
 }
+
+func TestStringReplace(t *testing.T) {
+	res := replaceSpace("abcdefg")
+	fmt.Println(res)
+	bytes := []byte(res)
+	bytes[1] = 'h'
+	str := "abcdefg"
+	str = str[1:]
+	fmt.Println(res)
+}
+
+func TestComma(t *testing.T) {
+	s := comma("123456789")
+	fmt.Println(s)
+}
