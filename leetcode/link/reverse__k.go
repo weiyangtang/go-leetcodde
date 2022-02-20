@@ -1,7 +1,7 @@
 package link
 
-func reverseKGroup(head *ListNode, k int) *ListNode {
-	dummy := &ListNode{}
+func reverseKGroup(head *DListNode, k int) *DListNode {
+	dummy := &DListNode{}
 	tail := dummy
 	tail.Next = head
 	for {
@@ -25,7 +25,7 @@ func reverseKGroup(head *ListNode, k int) *ListNode {
 	return dummy.Next
 }
 
-func reverse(head *ListNode) *ListNode {
+func reverse(head *DListNode) *DListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}

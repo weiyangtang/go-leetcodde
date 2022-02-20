@@ -13,9 +13,3 @@ func stringConvertNumber(strNumber string) int {
 
 	return int(parseInt)
 }
-func isHappy(n int) bool {
-	hashMap := make(map[int]bool, 0)
-	for _, ok := hashMap[n]; ok; {
-
-	}
-}
