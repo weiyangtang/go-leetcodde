@@ -42,3 +42,7 @@ func TestRightBoundBinSearch(t *testing.T) {
 	index = rightBoundBinSearch(arr, target)
 	assert.Equal(t, 3, index)
 }
+
+func TestSearch(t *testing.T) {
+	search([]int{4, 5, 6, 7, 0, 1, 2}, 0)
+}

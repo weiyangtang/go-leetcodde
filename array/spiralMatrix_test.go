@@ -2,6 +2,7 @@ package array
 
 import (
 	"fmt"
+	"math"
 	"testing"
 )
 
@@ -14,4 +15,11 @@ func TestSpiralMatrix(t *testing.T) {
 		}
 		fmt.Println()
 	}
+}
+
+func TestCalc(t *testing.T) {
+	N, n := 3, 14
+	M := (N - 1) * int(math.Ceil(float64(n*1.0/2/(n-1))))
+	fmt.Println(M)
+	fmt.Println(float64(n*1.0/2/(n-1)))
 }

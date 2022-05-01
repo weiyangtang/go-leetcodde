@@ -1,9 +1,9 @@
 package test
 
 type LRUCache struct {
-	m     map[int]*ListNode
-	list  MyList
-	cap   int
+	m    map[int]*ListNode
+	list MyList
+	cap  int
 	limit int
 }
 
