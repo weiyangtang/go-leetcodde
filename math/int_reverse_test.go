@@ -12,19 +12,26 @@ func TestReverse(t *testing.T) {
 }
 
 func TestCalc(t *testing.T) {
+	var (
+		M         = 3169.963
+		m float64 = 100
+	)
+
 	express := []float64{
-		100 / 1396.234 * 2 * 204.24 / 0.98,
-		100 / 1396.234 * 2 * 98 / 0.85,
-		100 / 1396.234 * 1 * 99.174 / 0.99,
-		100 / 1396.234 * 0.01 * 249.69 / 0.99,
-		100 / 1396.234 * 0.01 * 194,
+		m / M * 60 * 1 / 0.4,
+		m / M * 2 * 0.015 * 78 / 0.99,
+		m / M * 0.34 * 40 * 2 / 0.96,
+		m / M * 0.11 * 56 * 2 / 0.85,
+		m / M * 0.3 * 1 * 362.19 / 0.98,
+		m / M * 0.6 * 1 * 147.26 / 0.35,
 	}
-	fmt.Printf("100g结果\t50g结果\n")
+	fmt.Printf("100g结果\t200g结果\n")
 	var res float64 = 0
 	for _, val := range express {
-		fmt.Printf("%.3f \t %.3f \n", val, val/2)
+		fmt.Printf("%.3f \t %.3f \n", val, val*2)
 		res += val
 	}
-	fmt.Printf("%.3f", 100-res)
+	ans := 100 - res
+	fmt.Printf("%.3f \t %.3f \n", ans, ans*2)
 
 }
